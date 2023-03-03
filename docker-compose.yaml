@@ -5,8 +5,8 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=ak
       - MONGO_INITDB_ROOT_PASSWORD=ak
-    ports:
-      - "27017:27017"
+#    ports:
+#      - "27017:27017"
     volumes:
       - data:/data/db
   backend:
