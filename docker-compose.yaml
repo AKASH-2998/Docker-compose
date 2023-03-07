@@ -5,14 +5,12 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=ak
       - MONGO_INITDB_ROOT_PASSWORD=ak
-#    ports:
-#      - "27017:27017"
     volumes:
       - data:/data/db
   backend:
     build: ./backend
     ports:
-      - "80:80"
+      - "8080:80"
     environment:
       - MONGODB_USERNAME=ak
       - MONGODB_PASSWORD=ak
@@ -25,7 +23,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "3000:3000"
+      - "1010:3000"
     volumes:
       - ./frontend/src:/app/src
     stdin_open: true
